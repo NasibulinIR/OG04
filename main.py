@@ -18,6 +18,7 @@ class Solution(object):
                 result -= value
             else:
                 result += value
+        return result
 
     def int_to_roman(self, num: int) -> str:
         val_to_roman = [
@@ -41,3 +42,9 @@ class Solution(object):
                 result += symbol
                 num -= value
         return result
+
+solution = Solution()
+into_romans = solution.int_to_roman(int(input('Введите натуральное число для преобразования в римское:')))
+print(into_romans)
+into_integers = solution.roman_to_int(input('Введите число римскими цифрами для преобразования в натуральное:'))
+print(into_integers)
